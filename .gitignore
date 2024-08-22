@@ -1,0 +1,58 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv-metal-py310/
+*.venv
+*.env
+.env
+.venv/
+ENV/
+env/
+venv/
+
+# IDE/editor configurations (optional, based on your setup)
+.vscode/
+.idea/
+
+# Python version management (optional)
+.python-version
+
+# Logs and output files
+*.log
+*.out
+*.txt
+
+# MacOS files (if applicable)
+.DS_Store
+
+# Python dependency files
+*.egg-info/
+*.egg
+*.whl
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# Test coverage
+.coverage
+*.cover
+*.py,cover
