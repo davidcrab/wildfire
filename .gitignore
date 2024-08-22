@@ -24,7 +24,9 @@ venv/
 # Logs and output files
 *.log
 *.out
+# Ignore all .txt files except requirements.txt
 *.txt
+!requirements.txt
 
 # MacOS files (if applicable)
 .DS_Store

@@ -36,56 +36,5 @@ def run_transformer_endpoint():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# @app.route('/run_transformer', methods=['GET'])
-# def run_transformer_endpoint():
-#     # Activate the virtual environment and run the script
-#     command = [
-#         'bash', '-c',
-#         'source /Users/davidcrabtree/projects/tensorflow-metal/venv-metal-py310/bin/activate && python /Users/davidcrabtree/projects/tensorflow-metal/transformer_metal.py'
-#     ]
-    
-#     try:
-#         # Run the command and capture the output
-#         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        
-#         # Check for errors
-#         if result.returncode != 0:
-#             return jsonify({"error": result.stderr}), 500
-        
-#         # Return the script's output as the response
-#         return jsonify({"output": result.stdout})
-    
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
-
-# @app.route('/run_gpt2', methods=['POST'])
-# def run_gpt2():
-#     # Get the prompt from the POST request body
-#     data = request.json
-#     prompt = data.get("prompt", "")
-
-#     if not prompt:
-#         return jsonify({"error": "No prompt provided"}), 400
-    
-#     # Activate the virtual environment and run the script with the prompt
-#     command = [
-#         'bash', '-c',
-#         f'source /Users/davidcrabtree/projects/tensorflow-metal/venv-metal-py310/bin/activate && python /Users/davidcrabtree/projects/tensorflow-metal/gpt2_external.py "{prompt}"'
-#     ]
-    
-#     try:
-#         # Run the command and capture the output
-#         result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        
-#         # Check for errors
-#         if result.returncode != 0:
-#             return jsonify({"error": result.stderr}), 500
-        
-#         # Return the script's output as the response
-#         return jsonify({"output": result.stdout})
-    
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
